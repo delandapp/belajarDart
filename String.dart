@@ -5,4 +5,6 @@ void main() {
   String firstName = 'Muhammad';
   String lastName = 'Deland';
   print(firstName + ' ' + lastName); // kita bisa menggabungkan string
+
+  print('$firstName $lastName'); // kita bisa menggabungkan string menggunakan $
 }
