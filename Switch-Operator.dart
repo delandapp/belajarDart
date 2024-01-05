@@ -1,7 +1,7 @@
 void main() {
-  var likes = 10;
+  var likes = -1;
   var name = "Deland";
-  
+
   if(name == "Deland") {
     print('this is $name');
   } else if(name == 'Geusan') {
@@ -20,5 +20,7 @@ void main() {
     case >= 0:
       print('Not Engagement!');
       break;
+    default:
+      print('Your Bot!');
   }
 }
