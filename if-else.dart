@@ -12,5 +12,9 @@ void main() {
 
   if(userName.runtimeType == String) {
     print('this is string');
+  } else if (userName.runtimeType == int) {
+    print('this is int');
+  } else {
+    print('this is not string or int');
   }
 }
