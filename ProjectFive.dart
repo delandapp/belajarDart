@@ -1,3 +1,5 @@
+enum Content { reel, story, post }
+
 void main() {
   var name = "Muhammad Deland Arjuna Putra";
   var age = 23;
@@ -11,17 +13,36 @@ void main() {
   var followersR = followers % 1000;
   var followersK = (followers - followersR) / 1000;
   var hasGoodEngagement = false;
+  var reelCount = 3;
+  var storyCount = 5;
+  var postCount = 10;
+  Content contentToday = Content.reel;
 
-  if(watchHour > 50) {
+  if (watchHour > 50) {
     hasGoodEngagement = true;
   }
-  print(' hello my name is $name \n I am working as $jobNow \n my age is $age \n I am currently working as $jobCurrent \n my marital status is $isMarried \n I have been working for ${hour} hour and ${minutes * 60} minutes \n my followers is ${followersK.toInt()}K${followersR == 0 ? '' : followersR} Followers');
-  if(hasGoodEngagement == true) {
+  print(
+      ' hello my name is $name \n I am working as $jobNow \n my age is $age \n I am currently working as $jobCurrent \n my marital status is $isMarried \n I have been working for ${hour} hour and ${minutes * 60} minutes \n my followers is ${followersK.toInt()}K${followersR == 0 ? '' : followersR} Followers');
+  if (hasGoodEngagement == true) {
     print('I have good engagement');
   } else {
     print(' I have not good engagement');
   }
-  for(var i = 1; i <= 10; i++) {
-    print("Post number $i");
+  switch (contentToday) {
+    case Content.reel:
+      for (var i = 1; i <= reelCount; i++) {
+        print("Reel number $i");
+      }
+      break;
+    case Content.story:
+      for (var i = 1; i <= storyCount; i++) {
+        print("Story number $i");
+      }
+      break;
+    case Content.post:
+      for (var i = 1; i <= postCount; i++) {
+        print("Post number $i");
+      }
+      break;
   }
 }
